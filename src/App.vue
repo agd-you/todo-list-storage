@@ -10,6 +10,7 @@
       <li v-for="(todo, index) in todoStore.getTodoList" :key="index" class="card mb-20">
         <div class="flex flex-row align-items-center">
           <span class="flex-fill mr-20">{{ todo.content }}</span>
+          <input class="mr-20" type="checkbox" :checked="todo.isDone" v-model="todo.isDone"/>
           <button class="btn btn-danger" @click.stop="deleteTodo(index)">
             Supprimer
           </button>
