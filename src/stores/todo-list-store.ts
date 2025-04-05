@@ -19,5 +19,8 @@ export const useTodoList = defineStore("todoList", {
         isDone: false,
       });
     },
+    deleteTodo(index: number) {
+      this.todos.splice(index, 1);
+    },
   },
 });

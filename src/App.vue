@@ -10,6 +10,9 @@
       <li v-for="(todo, index) in todoStore.getTodoList" :key="index" class="card mb-20">
         <div class="flex flex-row align-items-center">
           <span class="flex-fill mr-20">{{ todo.content }}</span>
+          <button class="btn btn-danger" @click.stop="deleteTodo(index)">
+            Supprimer
+          </button>
         </div>
       </li>
     </ul>
@@ -29,6 +32,10 @@ const todoStore = useTodoList();
 function addTodo() {
   todoStore.addTodo(todoInput.value);
   todoInput.value = "";
+}
+
+function deleteTodo(index: number) {
+  todoStore.deleteTodo(index);
 }
 </script>
 
