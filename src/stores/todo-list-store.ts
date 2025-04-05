@@ -22,5 +22,11 @@ export const useTodoList = defineStore("todoList", {
     deleteTodo(index: number) {
       this.todos.splice(index, 1);
     },
+    updateTodo(todo:TodoList, index: number){
+      this.todos[index] = todo
+    },
+    checkTodo(todo:TodoList){
+      todo.isDone = !todo.isDone
+    },
   },
 });

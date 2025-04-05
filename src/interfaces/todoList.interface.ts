@@ -1,4 +1,5 @@
 export interface TodoList {
-    content: string;
-    isDone: boolean;
-  }
+  content: string;
+  isDone: boolean;
+  edit?: boolean;
+}
