@@ -15,18 +15,17 @@ export const useTodoList = defineStore("todoList", {
   actions: {
     addTodo(content: string) {
       this.todos.push({
-        content,
+        id: Date.now(),
+        content: content,
         isDone: false,
       });
     },
     deleteTodo(index: number) {
       this.todos.splice(index, 1);
     },
-    updateTodo(todo:TodoList, index: number){
-      this.todos[index] = todo
-    },
-    checkTodo(todo:TodoList){
-      todo.isDone = !todo.isDone
+    updateTodoContent(todo: TodoList, event: string) {
+      todo.content = event;
+      todo.edit = false;
     },
   },
 });
