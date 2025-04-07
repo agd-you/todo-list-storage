@@ -1,39 +1,72 @@
-# todo-list-pinia
+##  Nom de l'application 
 
-This template should help get you started developing with Vue 3 in Vite.
+todo-list-pinia
 
-## Recommended IDE Setup
+## Version
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+1.0.0
 
-## Type Support for `.vue` Imports in TS
+##  Description 
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+Création d'une application Todo List pour permettre aux utilisateurs 
+d’ajouter, modifier, supprimer et valider des tâches à faire.
 
-## Customize configuration
+##  Technos utilisées : 
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+* Vue 3 (Composition API) : 3.5.13
+* Typescript : 5.8.3
+* Vite :  6.2.5
+* Pinia : 3.0.1
+* sass-embedded : 1.86.3
+* pinia-plugin-persistedstate : 4.2.0
+* pinia/testing : 1.0.0
+* Vitest : 3.1.1
+* localStorage
+
+## Fonctionnalités
+
+* Ajouter une tâche
+* Supprimer une tâche
+* Marquer une tâche comme terminée
+* Mettre à jour une tâche
+* Persistance dans le LocalStorage
+
+## Persistance
+
+Utilisationn de localStorage pour persister les données de store Pinia, 
+pour garder les données même après un refresh de la page.
+
+## Tests
+
+Test unitaires avec vitest et pinia/testing
+
+## Roadmap
+
+* Authentification
+* Backend spring avec une base de données
+* Filtrer les tâches.
 
 ## Project Setup
 
 ```sh
+git clone https://github.com/agd-you/todo-list-storage
+cd todo-list-storage
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+## Démarrer et lancer un serveur en local 
 
 ```sh
 npm run dev
 ```
 
-### Type-Check, Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Run Unit Tests with [Vitest](https://vitest.dev/)
+## Lancer les tests unitaires avec [Vitest](https://vitest.dev/)
 
 ```sh
 npm run test:unit
+```
+## Compilation et minification pour la production
+
+```sh
+npm run build
 ```

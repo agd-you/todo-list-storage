@@ -48,7 +48,6 @@
           </div>
         </li>
       </ul>
-      {{ todoStore.getTodoList }}
     </div>
   </div>
 </template>
